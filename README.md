@@ -12,12 +12,14 @@ The rag chuncking stratigies:
 8. Parent-Child Chunking (Here The chucks is furthur divided into childs so that the context is taken from parents while the actual chucnck that is retrieved is the child.)
 
 Common measures for embedding:
+
 1.Cosine similarity
 2.Euclidian Distance
 3.Dot Product
 
 
 Search Stratigies:
+
 1.Similarity Search
 
     Most basic.
@@ -45,12 +47,14 @@ Search Stratigies:
     Most production systems use this.
 
 Re-ranking chuncks:
+
     Top retrieved chuncks are not alwasys the best so we need to re-rank these chuncks. And also we select the top few chucnks from the re-ranked chuncks.
 
     eg-
         Retrieve 20 chunks -> Re-ranker model ->  Choose best 5
 
 Metadata Filtering:
+
     We can also keep meta data of document for fast search.
 
     eg- if a query is asking for HR policy then document having meta data HR is fetched.
@@ -72,6 +76,7 @@ Sample prompt for rag:
        
        
 Possible reasons for hallucination in rag systems:
+
     -Bad Retrieval
     -Missing Data
     -Bad Prompt
